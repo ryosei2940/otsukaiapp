@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="otsukai3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>福島りょうせい</h1>
+    <img src="ryouface.png" alt="">
+    <p>ryoseinoID</p>
+    <p>バナナ１つ
+        りんご２つ
+    </p>
+    <h2>利用規約に同意する。</h2>
+    <div class="input_area">
+        <label>
+            <input type="checkbox" class="switch_input" name="" value="">
+            <span class="switch s1"></span>
+        </label>
+    </div>
+
+
+    <header>
+        <h1><a href="result.html">おつかいリスト</a></h1>
+    </header>
+    <form action="post" action="" class="otsukai_form">
+        <div id="data_time">
+            <div id="time">
+                <!--セレクトボックス-->
+                <select name=" time" id="morning_evening">
+                    <option value="朝">朝</option>
+                    <option value="夕">夕</option>
+                </select>
+            </div>
+        </div>
+        <div id="shopping_container">
+            <div id="shopping" class="milk">
+            </div>牛乳
+        </div>
+        <!--ラジオボタン-->
+        <label><input name="milk" type="radio" value=”牛乳いる”>いる</label>
+        <label><input name="milk" type="radio" value=”牛乳いらない”>いらない</label>
+        </div>
+        <div id="shopping" class="egg">
+        </div>卵</div>
+        <!--ラジオボタン-->
+        <label><input name="egg" class="egg" type="radio" value=”卵いる”>いる</label>
+        <label><input name="egg" class="egg" type="radio" value=”卵いらない”>いらない</label>
+        </div>
+        </div>
+        <div style="margin-top: 5px;"><input type="submit" value="送信" class="send"> </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

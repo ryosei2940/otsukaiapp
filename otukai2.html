@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="otukai2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>お使いアプリ2</h1>
+    <div>
+        <h2></h2>
+        <div>
+            <p>古賀隆之将</p>
+            <div class=oredesu> <img class=gazou2 src="profile_icon (1).png" alt=""></div>
+            <p>id.ryunosukeeeeeee</p>
+
+
+            <p>今日行くお店屋さん</p>
+            <div class="a">
+                <p>帰り道のついでなどで行けそうなところ</p>
+
+                <div class=i id="map"></div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script
+                    src='https://www.bing.com/api/maps/mapcontrol?key=AoMZaUbpoEfuQqXzbafhDlM6Jx-I0DoKBtEJmjR8Vy2TliNFW79dIsI4MOUVk-Ql'
+                    async defer></script>
+                <script>
+                    //Mapを表示するコードを書こう
+                    function mapsInit(position) {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        new Microsoft.Maps.Map('#map', {
+                            center: {
+                                latitude: lat, longitude: lng
+                            },
+                            zoom: 15,
+                        });
+                    }
+
+                    function showError(error) {
+                        let e = "";
+                        if (error.code == 1) {
+                            e = "位置情報が許可されてません";
+                        }
+                        if (error.code == 2) {
+                            e = "現在位置を特定できません";
+                        }
+                        if (error.code == 3) {
+                            e = "位置情報を取得する前にタイムアウトになりました";
+                        }
+                        alert("error：" + e);
+                    }
+                    // 現在地を取得するときのオプション
+                    const option = {
+                        enableHighAccuracy: true,
+                        maximumAge: 20000,
+                        timeout: 100000000
+                    };
+                    window.onload = function () {
+                        navigator.geolocation
+                            .getCurrentPosition(mapsInit, showError, option);
+                    }
+                </script>
+            </div>
+
+            <p>お使いする人の一言コメントなど</p>
+
+
+            <button><a href="otskai3.html">リクエスト</a></button>
+
+
+
+            <a href=""></a>
+        </div>
+    </div>
+</body>
